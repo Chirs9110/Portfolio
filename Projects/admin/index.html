@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminfelület DOM elemekkel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.css" />
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="foCim">
+        <h1 class="text-center text-dark">Admin felület</h1>
+
+        <div class="toggle" onclick="toggle()" id="darkLightMode">
+            <div class="circle"></div>
+        </div>
+        <span class="text">Dark Mode ON</span>
+    </div>
+
+    <!--Táblázat szekció-->
+
+    <table class="table table-bordered table-light table-hover table-sm text-center fw-normal mx-auto align-middle">
+        <thead class="fs-5">
+            <tr>
+                <th>Dolgozó vezetékneve</th>
+                <th>Dolgozó keresztneve</th>
+                <th>E-mail cím</th>
+                <th>Telefonszám</th>
+                <th>Beosztás</th>
+                <th>Aktív állomány</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pérez</td>
+                <td>Juan</td>
+                <td>jperez@gmail.com</td>
+                <td>123-4567</td>
+                <td>Fullstack fejlesztő</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+            <tr>
+                <td>Janssen</td>
+                <td>Jan</td>
+                <td>jjans@ghotmail.com</td>
+                <td>999-9999</td>
+                <td>Projekt leader</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+            <tr>
+                <td>Nanigashi</td>
+                <td>Nanno</td>
+                <td>nanninanno@gmail.com</td>
+                <td>111-1111</td>
+                <td>Adatbázis tudós</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+            <tr>
+                <td>Bloggs</td>
+                <td>Joe</td>
+                <td>bloggsj@hotmail.com</td>
+                <td>444-5555</td>
+                <td>BackEnd fejlesztő</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+            <tr>
+                <td>Meier</td>
+                <td>Hans</td>
+                <td>meierh@gmail.com</td>
+                <td>343-4545</td>
+                <td>FrontEnd fejlesztő</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+            <tr>
+                <td>Gipsz</td>
+                <td>Jakab</td>
+                <td>gjakab@gmail.com</td>
+                <td>121-2121</td>
+                <td>SCRUM master</td>
+                <td><input type="checkbox" class="allapot"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="container text-dark bg-light" id="kapcsoloTabla">
+
+        <h3 class="text-center">Táblázat Funkció kapcsolók</h3>
+
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider" id="kiJeloles"></span>
+            </label>
+            <span class="switch">Összes Dolgozó Atkív állomány kijelölése *</span>
+
+        </div>
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider" id="csikozasKiBe"></span>
+
+            </label>
+            <span class="switch" id="szovegResz">Táblázat Sor Kiemelés ON</span>
+        </div>
+        <br>
+
+        <div class="col-12 text-center">
+            <button type="button" class="btn btn-success text-white" id="tesztSor">Tesztsor
+                Beillesztése</button>
+            <button type="button" class="btn btn-danger text-white" id="tesztSorKi">Tesztsor
+                Törlése</button>
+        </div>
+
+        <br>
+        <p class="paragraf text-dark">* A táblázatban szereplő "Aktív állomány" elemek a kijelölést követően, megőrzik a
+            korábban megadott
+            értéket </p>
+    </div>
+
+
+    <!--Form section-->
+
+    <div class="container bg-light" id="userForm">
+        <div class="form">
+            <h2 class="text-center text-dark">Új céges felhasználó</h2>
+            <form action="#">
+                <!--Vezeték és keresztnév sora-->
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="text-dark" for="veznev">Vezetéknév:</label>
+                            <input type="text" id="vezNev" class="form-control" required>
+                            <small class="form-text">Dolgozó vezetékneve</small>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="text-dark" for="kernev">Keresztnév:</label>
+                            <input type="text" id="kerNev" class="form-control" required>
+                            <small class="form-text">Dolgozó keresztneve</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!--E-mail sor-->
+                <div class="form-group">
+                    <label class="text-dark" for="email">E-mail cím:</label>
+                    <input type="email" id="email" class="form-control" required>
+                    <small class="form-text">Dolgozó elérhetősége</small>
+                </div>
+                <!--Telefonszám sor-->
+                <div class="form-group">
+                    <label class="text-dark" for="tel">Céges mobilszám:</label>
+                    <div class="input-group">
+                        <select id="mobil" class="form-control">
+                            <option selected="selected" value="Telekom">+ 36 30</option>
+                            <option value="Telenor">+ 36 20 </option>
+                            <option value="Vodafone">+ 36 70</option>
+                            <input type="tel" id="tel" class="form-control" placeholder="123-4567" required>
+                        </select>
+                    </div>
+                    <small class="form-text">Dolgozó céges telefonszáma</small>
+
+                </div>
+
+                <!--Legördülő mobilszám előhívós menü sor-->
+                <div class="form-group">
+                    <label class="text-dark" for="tipus">Dolgozó beosztása:</label>
+                    <select id="beosztas" class="form-control">
+                        <option selected="selected" value="FrontEnd fejlesztő">FrontEnd fejlesztő</option>
+                        <option value="BackEnd fejlesztő">BackEnd fejlesztő </option>
+                        <option value="Fullstack fejlesztő">Fullstack fejlesztő</option>
+                        <option value="Projekt leader">Projekt leader</option>
+                        <option value="Adatbázis tudós">Adatbázis tudós</option>
+                        <option value="SCRUM master">SCRUM master</option>
+
+                    </select>
+                </div>
+                <br>
+
+                <!--Adatok feltöltése gomb-->
+                <button type="button" class="btn btn-success text-white form-control" id="formEllenorzes">Adatok
+                    feltöltése</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.js"></script>
+</body>
+
+</html>

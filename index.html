@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm a driven junior frontend developer who is
+        enthusiastic
+        about web development and
+        open-minded to new challenges and not least, committed to lifelong learning. I take
+        pleasure in
+        crafting user-friendly and efficient websites. When I'm not immersed in coding, I enjoy
+        reading, staying active, and hiking in nature all around the world.">
+    <meta name="keywords" content="frontend, junior frontend, webdevelopment">
+    <meta name="author" content="Krisztian Czinege">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <title>Krisztian Czinege</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="upperWave">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <path
+                d="M 0,400 C 0,400 0,200 0,200 C 146.93333333333334,188.8 293.8666666666667,177.6 466,193 C 638.1333333333333,208.4 835.4666666666667,250.39999999999998 1002,256 C 1168.5333333333333,261.6 1304.2666666666667,230.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+                stroke="none" stroke-width="0" fill="#182345" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
+            </path>
+        </svg>
+    </div>
+
+
+    <div class="content-bg">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top autohide">
+            <div class="container">
+                <div class="form-check form-switch toggleActive ">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">HU</label>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon my-custom-icon"></span> <i class="fas fa-times"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link projects" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link resume" href="Projects/MYownResume/resume.html"
+                                target="_blank">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link contact" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Header -->
+
+
+
+    <div class="englishText">
+        <main class="container first_section">
+            <div class="content-wrapper text-center">
+                <div class="left-side-header ">
+                    <img src="images/profile.jpg" alt="Krisztian Czinege" class="aboutMePicture">
+                </div>
+                <div class="text-center right-side-header">
+                    <div class="right-hero">
+                        <h1 class="title display-4">Hi there! my name is <p>Chris</p>
+                        </h1>
+                        <p>
+                            I'm a driven
+                        <p class="animation mx-auto">Junior Frontend</p> developer who is
+                        enthusiastic
+                        about web development and
+                        open-minded to new challenges and not least, committed to lifelong learning. I take
+                        pleasure in
+                        crafting user-friendly and efficient websites. When I'm not immersed in coding, I enjoy
+                        reading, staying active, and hiking in nature all around the world.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+
+        <!-- contact me section -->
+
+        <div class="container divider">
+            <div class="contactSection">
+
+                <div class="sectionOne flex-column flex-lg-row">
+                    <button type="button" name="pdfResume" value="pdfResume">
+                        <a href="Resume.pdf" download target="_blank">Download resume</a>
+                    </button>
+                </div>
+
+                <div class="sectionTwo flex-column flex-lg-row">
+                    <button type="button" name="getInTouch" value="getInTouch">
+                        <a href="mailto:cz.krisztian6@gmail.com">Get in touch</a></button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- PROJECTS section -->
+
+        <div class="projects-section slide-in" id="projects">
+            <h2>Projects I've Worked On</h2>
+            <div class="project-container">
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/berenyi.png" alt="Project 1">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/berenyiSirko.gif">
+                        </div>
+                        <h3>Project of Headstone Website</h3>
+                        <p>Language: <span class="flag">🇭🇺</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal">
+                                More info...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="https://www.berenyisirko.hu" target="_blank">Click here for project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/admin.png" alt="Project 2">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/AdminT.gif">
+                        </div>
+                        <h3>Project of Admin</h3>
+                        <p>Language: <span class="flag">🇭🇺</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                More info...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="Projects/admin/index.html" target="_blank">Click here for
+                                    project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/qrgenerator.png" alt="Project 3">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/AngularProjectComp.gif">
+                        </div>
+                        <h3>Personal QR code generator</h3>
+                        <p>Language: <span class="flag">🇬🇧</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                More info...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="https://krisztianqrcode.netlify.app/" target="_blank">Click here for
+                                    project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Project Modals Section -->
+
+        <div class="modal-container text-center">
+            <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel">Project </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>
+                                Short Description</h3>
+                            <p>This single-page website is designed to showcase the work of Berényi Sírkő
+                                Ltd., thus reaching a wider customer base. During its development, the main
+                                goal was to create simplicity and a professional appearance that aligns well
+                                with the industry. The lightbox gallery feature enables the viewing of
+                                images.
+
+                            </p>
+                            <h3>Key features</h3>
+                            <ul>
+                                <li>Custom CSS Animated Menu
+                                </li>
+                                <li>Progress Fill-bar</li>
+                                <li>Lightbox Image Display</li>
+                                <li>A Dark Color appearance which is most suitable for the given field of
+                                    expertise
+                                </li>
+                                <li>Responsive Design</li>
+                            </ul>
+                            <h3>Technologies used</h3>
+                            <div>
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModal2Label">Project 2</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>
+                                Short Description</h3>
+                            <p>This Administration panel allows you to view information related to users.
+                                In the table, you can do sort, perform selections, and add or delete new
+                                rows.
+                                It is also worth mentioning the appearance of the toggle switch between
+                                light and dark mode.
+                                The registration form allows you to register new users into the system.
+                                After filling out the form, the data immediately appears in the table.
+                            </p>
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Table Management: selection, addition, and deletion of new rows
+                                </li>
+                                <li>Registration Form with regex patterns</li>
+                                <li>Light and Dark Mode Toggle</li>
+                                <li>Immediate Data Appearance after registration</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                            <h3>Technologies Used</h3>
+                            <div class="bg-dark">
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-javascript.svg" alt="javacript_icon">
+                                <img src="images/icons/dom.png" alt="jsDom_icon" class="domIcon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-frame modal-top" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel">Project </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>Short Description</h3>
+                            <p>This project offers users the ability to generate QR codes leading to their own or
+                                other freely chosen websites in 4 different colors. Once the QR code is created, it
+                                can be freely downloaded in PNG format.
+                                Additionally, the URL field is validated using regex patterns, reducing the chances
+                                of errors and ensuring the creation of QR codes that lead only to valid URLs.</p>
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Generate QR Codes in 4 Different Colors</li>
+                                <li>Download QR Codes in PNG Format</li>
+                                <li>URL Validation with Regex Patterns</li>
+                                <li>Utilize ng Directives for Element Disappearances</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                            <h3>Technologies Used</h3>
+                            <div class="bg-dark">
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-typescript.svg" alt="typescript_icon">
+                                <img src="images/icons/icons8-angular.svg" alt="angular_icon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container m-5 mb-lg-0 slide-in text-center mx-auto">
+                <div class="spacer">
+                    <hr class="spacer-line">
+                </div>
+                <h2>Skills</h2>
+                <div id="skills">
+                    <div class="row">
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-html.svg" alt="html"> <span>HTML</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-css.svg" alt="css"> <span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap">
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container"><img src="images/icons/icons8-javascript.svg" alt="javascript">
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-jquery.svg" alt="jquery">
+                                <span>Jquery</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-typescript.svg" alt="typescript">
+                                <span>Typescript</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-angular.svg" alt="angular">
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-nodejs.svg" alt="node">
+
+                                <span>Node</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-github.svg" alt="git/github"> <span>Git
+                                    /
+                                    GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer">
+                    <hr class="spacer-line">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="lowerWave">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <path
+                    d="M 0,400 C 0,400 0,200 0,200 C 146.93333333333334,188.8 293.8666666666667,177.6 466,193 C 638.1333333333333,208.4 835.4666666666667,250.39999999999998 1002,256 C 1168.5333333333333,261.6 1304.2666666666667,230.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+                    stroke="none" stroke-width="0" fill="#182345" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
+                </path>
+            </svg>
+        </div>
+        <footer class="text-light text-center" id="contact">
+            <div class="container social-icons">
+                <ul class="d-flex flex-row justify-content-center align-items-stretch p-3">
+                    <li class="icon p-1"><a href="https://www.linkedin.com/in/chris-tian-324a94271/" rel="noreferrer"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="icon p-1"><a href="https://github.com/Chirs9110" rel="noreferrer" target="_blank"><i
+                                class="fab fa-github"></i></a></li>
+                </ul>
+
+            </div>
+            <p>&copy; Krisztian Czinege | Portfolio 2023</p>
+        </footer>
+    </div>
+
+    <!-- HUN section -->
+
+    <!-- Header -->
+
+    <!-- <div class="content-bg">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top autohide">
+                <div class="container">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            onclick="switchInputBack()">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox
+                            input</label>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon my-custom-icon"></span> <i class="fas fa-times"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link projects" href="#projects_hu">Projektek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link resume" href="Projects/MYownResume/resume.html"
+                                    target="_blank">Önéletrajz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link contact" href="#contact_hu">Kapcsolat</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div> -->
+    <div class="hungarianText" style="display: none;">
+        <main class="container first_section">
+            <div class="content-wrapper text-center">
+                <div class="left-side-header ">
+                    <img src="images/profile.jpg" alt="Krisztian Czinege" class="aboutMePicture">
+                </div>
+                <div class="text-center right-side-header">
+                    <div class="right-hero">
+                        <h1 class="title display-4">Üdv az oldalamon,
+                            <p>Krisztián vagyok!</p>
+                        </h1>
+                        <p>
+                            Egy elkötelezett
+                        <p class="animation mx-auto">Junior Frontend</p> fejlesztő aki
+                        lelkesedik a webfejlesztésért, és nyitott az új kihívásokra, nem utolsósorban pedig
+                        hisz az élethosszig tartó tanulásban. Szívesen veszek részt felhasználóbarát és
+                        hatékony weboldalak készítésében. Amikor épp nem a kódolok,
+                        leginkább olvasok, aktívan mozgok, és túrázok mindenfelé a nagy világban.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+
+
+
+        <div class="container divider">
+            <div class="contactSection">
+
+                <div class="sectionOne flex-column flex-lg-row">
+                    <button type="button" name="pdfResume" value="pdfResume">
+                        <a href="Resume.pdf" download>Önéletrajz letöltése</a>
+                    </button>
+                </div>
+
+                <div class="sectionTwo flex-column flex-lg-row">
+                    <button type="button" name="getInTouch" value="getInTouch">
+                        <a href="mailto:cz.krisztian6@gmail.com">Írj nekem e-mailt</a></button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="projects-section slide-in" id="projects_hu">
+            <h2>Projektek</h2>
+            <div class="project-container">
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/berenyi.png" alt="Project 1">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/berenyiSirko.gif">
+                        </div>
+                        <h3>Sírköves weboldal projekt</h3>
+                        <p>Nyelv: <span class="flag">🇭🇺</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                                Részletek...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="https://www.berenyisirko.hu" target="_blank">Projekt megtekintése</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/admin.png" alt="Project 2">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/AdminT.gif">
+                        </div>
+                        <h3>Admin táblázat projekt</h3>
+                        <p>Nyelv: <span class="flag">🇭🇺</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                                Részletek...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="Projects/admin/index.html" target="_blank">Projekt
+                                    megtekintése</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="image-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/qrgenerator.png" alt="Project 3">
+                        </div>
+                        <div class="project-gif">
+                            <img src="images/Compressedgif/AngularProjectComp.gif">
+                        </div>
+                        <h3>Qr kód készítő</h3>
+                        <p>Nyelv: <span class="flag">🇬🇧</span></p>
+                        <div class="buttonGroup">
+                            <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                                Részletek...
+                            </button>
+                            <button class="cardButtons">
+                                <a href="https://krisztianqrcode.netlify.app/" target="_blank">Projekt
+                                    megtekintése</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal-container text-center">
+            <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel">Project </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>
+                                Rövid leírás</h3>
+                            <p>Ez a single-page a Berényi Sírkő kft munkáját hivatott prezentálni, ezzel segítve a
+                                szélesebb ügyfélkör elérését. A kivitelezés során az egyszerűség, és a szakmához jól
+                                illeszkedő színek, valamint az arculat megteremtése volt elsődleges.
+                                A képek megtekintését a lightbox képnézegető teszi lehetővé.
+                                Ezenfelül az oldalon a kommunikációhoz szükséges legegyszerűbb eszközök segítik az
+                                ügyfeleket a céggel történő kapcsolatfelvételben.
+
+                            </p>
+                            <h3>Főbb jellemzők</h3>
+                            <ul>
+                                <li>Egyedi css menü
+                                </li>
+                                <li>Progress Fill-bar</li>
+                                <li>Lightbox képmegjelenítés</li>
+                                <li>Az adott szakterülethez leginkább illeszkedő színhatások
+                                </li>
+                                <li>Reszponzív design</li>
+                            </ul>
+
+                            <h3>Felhasznált technológiák</h3>
+                            <div>
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModal2Label">Project 2</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>
+                                Rövid leírás</h3>
+                            <p>Ez az adminisztrációs felület lehetőséget nyújt a felhasználókkal kapcsolatos
+                                információk
+                                megtekintésére.
+                                A táblázatban rendezhet, kiválaszthat, új sorokat adhat hozzá, vagy épp törölhet
+                                adott esetben.
+                                Érdemes megjegyezni a toggle kapcsoló megjelenését, ami a világos és sötét mód
+                                között teszi lehetővé a váltást.
+                                A regisztrációs űrlap által egyszerűen regisztrálhatunk az új felhasználókat a
+                                rendszerbe.
+                                Az űrlap kitöltése után az adatok azonnal megjelennek a táblázatban.
+                            </p>
+                            <h3>Főbb jellemzők</h3>
+                            <ul>
+                                <li>Táblázatkezelés: sorok kiválasztása, hozzáadása és törlése
+                                </li>
+                                <li>Regisztrációs űrlap regex mintákkal</li>
+                                <li>Világos és sötét mód</li>
+                                <li>Azonnali adatmegjelenítés regisztráció után</li>
+                                <li>Reszponzív design</li>
+                            </ul>
+                            <h3>Felhasznált technológiák</h3>
+                            <div class="bg-dark">
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-javascript.svg" alt="javacript_icon">
+                                <img src="images/icons/dom.png" alt="jsDom_icon" class="domIcon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-frame modal-top" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel">Project </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <h3>Rövid leírás</h3>
+                            <p>Ez a projekt biztosítja a felhasználók számára saját, vagy más általuk
+                                szabadon választott weboldalhoz vezető QR kód generálására 4 féle színben.
+                                A már létrehozott QR-t ezután szabadon letölthetik PNG formátumban.
+                                Emellett az URL mező regex mintákkal kerül ellenőrzésre, ami minimalizálja a
+                                hibalehetőséget, és szavatolja hogy helyes URL-hez vezető QR kódokat
+                                hozzanak létre.
+                            <h3>Főbb jellemzők</h3>
+                            <ul>
+                                <li>QR Kód Generálás különböző 4 féle színben</li>
+                                <li>QR Kód Letöltése PNG Formátumban</li>
+                                <li>Regex Ellenőrzés a Webhely URL-ekhez</li>
+                                <li>ng Direktívák Alkalmazása Elemek Eltűnéséhez</li>
+                                <li>Reszponzív Design</li>
+                            </ul>
+                            <h3>Felhasznált Technológiák</h3>
+                            <div class="bg-dark">
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-typescript.svg" alt="typescript_icon">
+                                <img src="images/icons/icons8-angular.svg" alt="angular_icon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container m-5 mb-lg-0 slide-in text-center mx-auto">
+                <div class="spacer">
+                    <hr class="spacer-line">
+                </div>
+                <h2>Készségek</h2>
+                <div id="skills">
+                    <div class="row">
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-html.svg" alt="html"> <span>HTML</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-css.svg" alt="css"> <span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap">
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container"><img src="images/icons/icons8-javascript.svg" alt="javascript">
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/Icons/icons8-jquery.svg" alt="jquery">
+                                <span>Jquery</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-typescript.svg" alt="typescript">
+                                <span>Typescript</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-angular.svg" alt="angular">
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-nodejs.svg" alt="node">
+
+                                <span>Node</span>
+                            </div>
+                        </div>
+                        <div class="col-4 skill">
+                            <div class="skill-container">
+                                <img src="images/icons/icons8-github.svg" alt="git/github"> <span>Git
+                                    /
+                                    GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer">
+                    <hr class="spacer-line">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="lowerWave">
+            <svg width="100%" height="10%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <path
+                    d="M 0,400 C 0,400 0,200 0,200 C 146.93333333333334,188.8 293.8666666666667,177.6 466,193 C 638.1333333333333,208.4 835.4666666666667,250.39999999999998 1002,256 C 1168.5333333333333,261.6 1304.2666666666667,230.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+                    stroke="none" stroke-width="0" fill="#182345" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
+                </path>
+            </svg>
+        </div>
+        <footer class="text-light text-center" id="contact_hu">
+            <div class="container social-icons">
+                <ul class="d-flex flex-row justify-content-center align-items-stretch mt-3 p-1">
+                    <li class="icon p-3"><a href="https://www.linkedin.com/in/chris-tian-324a94271/" rel="noreferrer"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="icon p-3"><a href="https://github.com/Chirs9110" rel="noreferrer" target="_blank"><i
+                                class="fab fa-github"></i></a></li>
+                </ul>
+
+            </div>
+            <p>&copy; Czinege Krisztián | Portfolió oldal 2023</p>
+        </footer>
+
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
