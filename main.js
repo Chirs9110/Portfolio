@@ -58,5 +58,14 @@ imageContainers.forEach((imageContainer, index) => {
         projectImage.style.display = 'block';
         projectGif.style.display = 'none';
     });
+    imageContainer.addEventListener('click', () => {
+        if (projectImage.style.display === 'none') {
+            projectImage.style.display = 'block';
+            projectGif.style.display = 'none';
+        } else {
+            projectImage.style.display = 'none';
+            projectGif.style.display = 'block';
+        }
+    });
 });
 
