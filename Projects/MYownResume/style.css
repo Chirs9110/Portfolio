@@ -258,7 +258,7 @@ li .info p {
 @media (min-width: 375px) and (max-width: 549px) {
     .resume {
         scale: 0.4;
-        transform: translateY(-80%)translateX(-60%);
+        margin: 0 auto;
     }
 }
 
