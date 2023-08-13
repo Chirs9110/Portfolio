@@ -3,15 +3,24 @@ const hungarianText = document.querySelector('.hungarianText');
 const englishText = document.querySelector('.englishText');
 const toggle = document.querySelector('.form-check-input');
 const formText = document.querySelector('.form-check-label')
+
 switchInput.addEventListener('click', function () {
     if (this.checked) {
         hungarianText.style.display = 'block';
         englishText.style.display = 'none';
-        toggle.classList.add('.toggleActive')
+        toggle.classList.add('.toggleActive');
         formText.textContent = 'EN';
         document.querySelector('.projects').textContent = 'Projektek';
         document.querySelector('.resume').textContent = 'Önéletrajz';
         document.querySelector('.contact').textContent = 'Kapcsolat';
+
+        const projectLink = document.querySelector('.projects.section');
+        const resumeLink = document.querySelector('.resume');
+        const contactLink = document.querySelector('.contact.section');
+
+        projectLink.href = '#projektek';
+        resumeLink.href = 'Projects/MYownResume/resume.html';
+        contactLink.href = '#kapcsolat';
     }
     else {
         hungarianText.style.display = 'none';
@@ -20,9 +29,23 @@ switchInput.addEventListener('click', function () {
         document.querySelector('.projects').textContent = 'Projects';
         document.querySelector('.resume').textContent = 'Resume';
         document.querySelector('.contact').textContent = 'Contact';
+
+        const projectLink = document.querySelector('.projects.section');
+        const resumeLink = document.querySelector('.resume');
+        const contactLink = document.querySelector('.contact.section');
+
+        projectLink.href = '#projects';
+        resumeLink.href = 'Projects/MYownResume/resume.html';
+        contactLink.href = '#contact';
     }
 });
 
+
+
+
+
+
+//after translate anchor solution
 
 //sliding effect of elements
 const slideInSections = document.querySelectorAll('.slide-in');
@@ -40,34 +63,6 @@ slideInSections.forEach(section => {
     observer.observe(section);
 });
 
-// //Image gif appearing-disappearing function
-// const imageContainers = document.querySelectorAll('.image-container');
-// const projectImages = document.querySelectorAll('.project-image');
-// const projectGifs = document.querySelectorAll('.project-gif');
-
-// imageContainers.forEach((imageContainer, index) => {
-//     const projectImage = projectImages[index];
-//     const projectGif = projectGifs[index];
-
-//     imageContainer.addEventListener('mouseenter', () => {
-//         projectImage.style.display = 'none';
-//         projectGif.style.display = 'block';
-//     });
-
-//     imageContainer.addEventListener('mouseleave', () => {
-//         projectImage.style.display = 'block';
-//         projectGif.style.display = 'none';
-//     });
-//     imageContainer.addEventListener('click', () => {
-//         if (projectImage.style.display === 'none') {
-//             projectImage.style.display = 'block';
-//             projectGif.style.display = 'none';
-//         } else {
-//             projectImage.style.display = 'none';
-//             projectGif.style.display = 'block';
-//         }
-//     });
-// });
 
 const imageContainers = document.querySelectorAll('.image-container');
 const projectImages = document.querySelectorAll('.project-image');
@@ -94,7 +89,7 @@ imageContainers.forEach((imageContainer, index) => {
 
     if (isMobile) {
         imageContainer.addEventListener('touchstart', () => {
-            setGifState(true);
+            setGifState(!projectGif.style.display === 'block'); // Invert the state
         });
     } else {
         imageContainer.addEventListener('mouseover', () => {
