@@ -1,7 +1,6 @@
 * {
     color: white;
     scroll-behavior: smooth;
-    list-style-type: none;
 }
 
 body {
@@ -171,7 +170,7 @@ body {
 @media screen and (min-width: 375px) and (max-width: 549px) {
 
     .navbar-toggler {
-        margin-right: 50px;
+        margin-right: 10px;
     }
 
     .left-side-header {
@@ -566,6 +565,16 @@ a {
 .domIcon {
     height: 45px;
     width: 60px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-top: 10px;
+    text-align: center;
 }
 
 .spacer {

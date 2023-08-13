@@ -40,7 +40,35 @@ slideInSections.forEach(section => {
     observer.observe(section);
 });
 
-//Image gif appearing-disappearing function
+// //Image gif appearing-disappearing function
+// const imageContainers = document.querySelectorAll('.image-container');
+// const projectImages = document.querySelectorAll('.project-image');
+// const projectGifs = document.querySelectorAll('.project-gif');
+
+// imageContainers.forEach((imageContainer, index) => {
+//     const projectImage = projectImages[index];
+//     const projectGif = projectGifs[index];
+
+//     imageContainer.addEventListener('mouseenter', () => {
+//         projectImage.style.display = 'none';
+//         projectGif.style.display = 'block';
+//     });
+
+//     imageContainer.addEventListener('mouseleave', () => {
+//         projectImage.style.display = 'block';
+//         projectGif.style.display = 'none';
+//     });
+//     imageContainer.addEventListener('click', () => {
+//         if (projectImage.style.display === 'none') {
+//             projectImage.style.display = 'block';
+//             projectGif.style.display = 'none';
+//         } else {
+//             projectImage.style.display = 'none';
+//             projectGif.style.display = 'block';
+//         }
+//     });
+// });
+
 const imageContainers = document.querySelectorAll('.image-container');
 const projectImages = document.querySelectorAll('.project-image');
 const projectGifs = document.querySelectorAll('.project-gif');
@@ -48,24 +76,32 @@ const projectGifs = document.querySelectorAll('.project-gif');
 imageContainers.forEach((imageContainer, index) => {
     const projectImage = projectImages[index];
     const projectGif = projectGifs[index];
+    let isMobile = false;
 
-    imageContainer.addEventListener('mouseenter', () => {
-        projectImage.style.display = 'none';
-        projectGif.style.display = 'block';
-    });
+    if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+        isMobile = true;
+    }
 
-    imageContainer.addEventListener('mouseleave', () => {
-        projectImage.style.display = 'block';
-        projectGif.style.display = 'none';
-    });
-    imageContainer.addEventListener('click', () => {
-        if (projectImage.style.display === 'none') {
-            projectImage.style.display = 'block';
-            projectGif.style.display = 'none';
-        } else {
+    function setGifState(showGif) {
+        if (showGif) {
             projectImage.style.display = 'none';
             projectGif.style.display = 'block';
+        } else {
+            projectImage.style.display = 'block';
+            projectGif.style.display = 'none';
         }
-    });
-});
+    }
 
+    if (isMobile) {
+        imageContainer.addEventListener('touchstart', () => {
+            setGifState(true);
+        });
+    } else {
+        imageContainer.addEventListener('mouseover', () => {
+            setGifState(true);
+        });
+        imageContainer.addEventListener('mouseleave', () => {
+            setGifState(false);
+        });
+    }
+});

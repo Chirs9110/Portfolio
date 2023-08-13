@@ -254,3 +254,24 @@
 li .info p {
     margin-top: 10px;
 }
+
+@media (min-width: 375px) and (max-width: 549px) {
+    .resume {
+        scale: 0.4;
+        transform: translateY(-80%)translateX(-60%);
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 767px) {
+    .resume {
+        scale: 0.6;
+        transform: translateY(-40%)translateX(-20%);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .resume {
+        scale: 0.8;
+        transform: translateY(-5%)translateX(0%);
+    }
+}
