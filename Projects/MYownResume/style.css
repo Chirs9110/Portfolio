@@ -256,9 +256,16 @@ li .info p {
 }
 
 @media (min-width: 375px) and (max-width: 549px) {
+    .container{
+        width: 100%;
+    }
     .resume {
-        scale: 0.4;
-        margin: 0 auto;
+        scale: 0.5;
+        width: 10px;
+        margin: -300px 15px;
+    }
+    .fa-mobile-alt, span{
+  margin-right:350px;
     }
 }
 
