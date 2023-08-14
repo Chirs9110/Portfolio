@@ -258,7 +258,6 @@ li .info p {
 @media (min-width: 375px) and (max-width: 549px) {
     .container {
         width: 100%;
-        position: relative;
     }
     .resume {
         scale: 0.5;
