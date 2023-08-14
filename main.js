@@ -40,13 +40,6 @@ switchInput.addEventListener('click', function () {
     }
 });
 
-
-
-
-
-
-//after translate anchor solution
-
 //sliding effect of elements
 const slideInSections = document.querySelectorAll('.slide-in');
 
@@ -63,15 +56,17 @@ slideInSections.forEach(section => {
     observer.observe(section);
 });
 
-
+//project gif animation appearing-disappearing 
 const imageContainers = document.querySelectorAll('.image-container');
 const projectImages = document.querySelectorAll('.project-image');
 const projectGifs = document.querySelectorAll('.project-gif');
+
 
 imageContainers.forEach((imageContainer, index) => {
     const projectImage = projectImages[index];
     const projectGif = projectGifs[index];
     let isMobile = false;
+    let isGifVisible = false;
 
     if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
         isMobile = true;
@@ -81,22 +76,26 @@ imageContainers.forEach((imageContainer, index) => {
         if (showGif) {
             projectImage.style.display = 'none';
             projectGif.style.display = 'block';
+            isGifVisible = true;
         } else {
             projectImage.style.display = 'block';
             projectGif.style.display = 'none';
+            isGifVisible = false;
         }
     }
 
     if (isMobile) {
         imageContainer.addEventListener('touchstart', () => {
-            setGifState(!projectGif.style.display === 'block'); // Invert the state
+            setGifState(!isGifVisible);
         });
     } else {
         imageContainer.addEventListener('mouseover', () => {
             setGifState(true);
         });
         imageContainer.addEventListener('mouseleave', () => {
-            setGifState(false);
+            if (isGifVisible) {
+                setGifState(false);
+            }
         });
     }
 });
