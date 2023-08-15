@@ -259,13 +259,16 @@ li .info p {
     .container {
         width: 100%;
     }
+
     .resume {
         scale: 0.5;
         position: absolute;
         left: -50%;
         top: -50%;
     }
-    .fa-mobile-alt, span {
+
+    .fa-mobile-alt,
+    span {
         margin-right: 350px;
     }
 }
