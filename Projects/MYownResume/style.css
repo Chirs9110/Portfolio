@@ -255,16 +255,31 @@ li .info p {
     margin-top: 10px;
 }
 
-@media (min-width: 375px) and (max-width: 549px) {
-    .container {
+@media (min-width: 375px) and (max-width: 420px) {
+    #background {
+       height: 100%;
+    }
+
+    .resume {
+        width: 100%;
+        scale: 0.45;
+        transform: translateY(-60%)translateX(-55%);
+    }
+
+    .fa-mobile-alt,
+    span {
+        margin-right: 350px;
+    }
+}
+@media (min-width: 421px) and (max-width: 549px) {
+    #background {
         width: 100%;
     }
 
     .resume {
+        width: 100%;
         scale: 0.5;
-        position: absolute;
-        left: -50%;
-        top: -50%;
+        transform: translateY(-50%)translateX(-25%);
     }
 
     .fa-mobile-alt,
@@ -276,7 +291,7 @@ li .info p {
 @media screen and (min-width: 550px) and (max-width: 767px) {
     .resume {
         scale: 0.6;
-        transform: translateY(-40%)translateX(-20%);
+        transform: translateY(-35%)translateX(-20%);
     }
 }
 
