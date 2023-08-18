@@ -309,36 +309,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const container = document.querySelector('.container');
-        const backGround = document.querySelector('#background');
-        const scrollSpeed = 1;
-
-        function updateBackground() {
-            const scrollPosition = container.scrollTop;
-            backGround.style.backgroundPositionY = -scrollPosition * scrollSpeed + 'px';
-
-            const containerHeight = container.clientHeight;
-            const darkness = scrollPosition / containerHeight;
-            const overlayColor = `rgba(0, 0, 0, ${darkness})`;
-            backGround.style.backgroundImage = `linear-gradient(${overlayColor}, ${overlayColor}), url('background.png')`;
-            container.style.transform = `translateY(${scrollPosition}px)`;
-        }
-
-
-
-        function handleResize() {
-            if (window.innerWidth >= 375) {
-                updateBackground();
-            }
-        }
-
-        window.addEventListener('load', () => {
-            handleResize(); updateBackground()
-        });
-
-        window.addEventListener('resize', handleResize);
-    </script>
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </body>
 
