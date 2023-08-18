@@ -202,16 +202,22 @@
 
                             <table>
                                 <tr>
-                                    <td colspan="2"><i class="fa fa-map-marker icon"></i> <span class="data">Mikszáth
+                                    <td colspan="2"><i class="fa fa-map-marker icon map-marker"></i> <span class="data">Mikszáth
                                             Kálmán
-                                            utca 67, 1184 Budapest</span></td>
+                                            utca 67,  <span class="currentCity">1184 Budapest</span></span></td>
+
                                 </tr>
                                 <tr>
-                                    <td> <i class="fas fa-envelope icon"></i></i> <span
-                                            class="data">krisztianczinege.info@gmail.com</span></td>
-                                    <td> <i class="fas fa-mobile-alt icon"></i><span class="data">
-                                            +36-30-947-45-18
-                                        </span></td>
+                                    <td> <i class="fas fa-envelope icon envelope"> <span
+                                                class="data">krisztianczinege.info@gmail.com</span></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-mobile-alt icon"></i><span class="data">
+                                                +36-30-947-45-18
+                                        </span>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -324,13 +330,11 @@
         function handleResize() {
             if (window.innerWidth >= 375) {
                 updateBackground();
-            } else {
-
             }
         }
 
         window.addEventListener('load', () => {
-            handleResize();
+            handleResize(); updateBackground()
         });
 
         window.addEventListener('resize', handleResize);
