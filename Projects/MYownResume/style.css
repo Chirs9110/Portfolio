@@ -10,7 +10,7 @@
 
 
 #background {
-    background-image: url('background.png');
+    background-image: linear-gradient(#141e30, #243b55);;
     background-repeat: repeat;
     background-size: cover;
     background-position: center 0;
@@ -19,7 +19,6 @@
     height: 100%;
     left: 0;
     top: 0;
-
 }
 
 .container {
@@ -27,7 +26,7 @@
     margin-top: 5%;
     z-index: 1;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100vh; 
 }
 
 .bold {
@@ -48,9 +47,12 @@
     height: auto;
     display: flex;
     margin: 50px auto;
-    -moz-box-shadow: 0 0 15px #fffefe;
-    -webkit-box-shadow: 0 0 15px #fffcfc;
-    box-shadow: 0 0 15px #f2f2f2;
+    box-shadow:
+    -3px 0 7px #00f,
+    -3px 0 9px #00f,
+    -3px 0 11px #00f,
+    -3px 0 14px rgb(200, 200, 209),
+    -3px 0 14px rgb(210, 210, 219);
 }
 
 .resume .resume_left {
@@ -164,6 +166,12 @@
     width: 520px;
     background: #fff;
     padding: 25px;
+    box-shadow:
+    3px 0 7px #00f,
+    3px 0 9px #00f,
+    3px 0 11px #00f,
+    3px -3px 15px rgb(200, 200, 209),
+    3px 3px 20px rgb(210, 210, 219);
 }
 
 .name {

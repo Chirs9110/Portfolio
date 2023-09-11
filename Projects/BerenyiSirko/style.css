@@ -615,3 +615,17 @@ a[href^="tel"] {
     color: inherit;
     text-decoration: none;
 }
+footer a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  footer a:hover{
+    color: #0f0926; 
+    transform:scale(1.6);
+  }
+
+  footer:hover{
+    transform: translateY(-10%);
+    transition: .6s;
+  }
