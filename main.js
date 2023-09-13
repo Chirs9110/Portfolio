@@ -21,6 +21,7 @@ switchInput.addEventListener('click', function () {
         projectLink.href = '#projektek';
         resumeLink.href = 'Projects/MYownResume/resume.html';
         contactLink.href = '#kapcsolat';
+
     }
     else {
         hungarianText.style.display = 'none';
@@ -37,6 +38,9 @@ switchInput.addEventListener('click', function () {
         projectLink.href = '#projects';
         resumeLink.href = 'Projects/MYownResume/resume.html';
         contactLink.href = '#contact';
+
+
+
     }
 });
 
@@ -98,4 +102,30 @@ imageContainers.forEach((imageContainer, index) => {
             }
         });
     }
+});
+
+//'HandMade' Safety check  
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButtons = document.querySelectorAll(".submitButton");
+    const captchaInputs = document.querySelectorAll(".m_captcha_answer_modal");
+
+    submitButtons.forEach(function (submitButton, index) {
+        submitButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            const captchaInput = captchaInputs[index];
+            const captchaAnswer = captchaInput.value.toLowerCase();
+            let correctAnswer = "ear";
+
+            if (switchInput.checked) {
+                correctAnswer = "fül";
+            }
+            if (captchaAnswer === correctAnswer) {
+                window.location.href = "mailto:krisztianczinege.info@gmail.com";
+                window.location.reload();
+            } else {
+                alert(switchInput.checked ? "Hibás válasz!" : "Wrong answer!");
+                captchaInput.value = "";
+            }
+        });
+    });
 });

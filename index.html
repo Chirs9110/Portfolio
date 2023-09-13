@@ -118,14 +118,44 @@
                 </div>
 
                 <div class="sectionTwo flex-column flex-lg-row">
-                    <button type="button" name="getInTouch" value="getInTouch">
-                        <a href="mailto:krisztianczinege.info@gmail.com">Get in touch</a></button>
+                    <button type="button" name="getInTouch" value="getInTouch" data-bs-toggle="modal"
+                        data-bs-target="#mailModal">
+                        Get in touch
+                    </button>
                 </div>
-
+                <div class="modal-container text-center">
+                    <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-md  modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark">
+                                    <h5 class="modal-title mx-auto text-danger explaination">
+                                        Please answer this short question to help prevent spam.
+                                   </h5>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <form id="emailFormModal">
+                                        <div class="authentication_details text-light form-group">
+                                            <label for="m_captcha_answer_modal">Which sense do we use to hear: eye or
+                                                ear?</label>
+                                            <input
+                                                class="form-control m-1 form-outline w-50 mx-auto m_captcha_answer_modal"
+                                                type="text" name="m_captcha_answer_modal"
+                                                placeholder="Write your answer here">
+                                            <button type="button" class="submitButton">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer bg-dark">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
 
         <!-- PROJECTS section -->
 
@@ -304,11 +334,15 @@
                         </div>
                         <div class="modal-body bg-dark">
                             <h3>Short Description</h3>
-                            <p>This project offers users the ability to generate QR codes leading to their own or
-                                other freely chosen websites in 4 different colors. Once the QR code is created, it
+                            <p>This project offers users the ability to generate QR codes leading to their own
+                                or
+                                other freely chosen websites in 4 different colors. Once the QR code is created,
+                                it
                                 can be freely downloaded in PNG format.
-                                Additionally, the URL field is validated using regex patterns, reducing the chances
-                                of errors and ensuring the creation of QR codes that lead only to valid URLs.</p>
+                                Additionally, the URL field is validated using regex patterns, reducing the
+                                chances
+                                of errors and ensuring the creation of QR codes that lead only to valid URLs.
+                            </p>
                             <h3>Key Features</h3>
                             <ul>
                                 <li>Generate QR Codes in 4 Different Colors</li>
@@ -466,9 +500,43 @@
                     </button>
                 </div>
 
+
                 <div class="sectionTwo flex-column flex-lg-row">
-                    <button type="button" name="getInTouch" value="getInTouch">
-                        <a href="mailto:krisztianczinege.info@gmail.com">Írj nekem e-mailt</a></button>
+                    <button type="button" name="getInTouch" value="getInTouch" data-bs-toggle="modal"
+                        data-bs-target="#mailModalHun">
+                        Írj nekem e-mailt
+                    </button>
+                </div>
+                <div class="modal-container text-center">
+                    <div class="modal fade" id="mailModalHun" tabindex="-1" role="dialog"
+                        aria-labelledby="mailModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-md  modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark">
+                                    <h5 class="modal-title mx-auto text-danger explaination">
+                                        Kérlek, válaszolj erre a rövid kérdésre, hogy segíts megelőzni a spameket. 
+                                   </h5> 
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <form id="emailFormModalHun">
+                                        <div class="authentication_details text-light form-group">
+                                            <label for="m_captcha_answer_modal">Melyik érzékszervünk használatos a
+                                                halláshoz: szem, vagy fül?</label>
+                                            <input
+                                                class="form-control m-1 form-outline w-50 mx-auto m_captcha_answer_modal"
+                                                type="text" name="m_captcha_answer_modal"
+                                                placeholder="Ide írd a választ">
+                                            <button type="button" class="submitButton">Küldés</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer bg-dark">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Bezárás</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -566,11 +634,14 @@
                         <div class="modal-body bg-dark">
                             <h3>
                                 Rövid leírás</h3>
-                            <p>Ez a single-page a Berényi Sírkő kft munkáját hivatott prezentálni, ezzel segítve a
-                                szélesebb ügyfélkör elérését. A kivitelezés során az egyszerűség, és a szakmához jól
+                            <p>Ez a single-page a Berényi Sírkő kft munkáját hivatott prezentálni, ezzel segítve
+                                a
+                                szélesebb ügyfélkör elérését. A kivitelezés során az egyszerűség, és a szakmához
+                                jól
                                 illeszkedő színek, valamint az arculat megteremtése volt elsődleges.
                                 A képek megtekintését a lightbox képnézegető teszi lehetővé.
-                                Ezenfelül az oldalon a kommunikációhoz szükséges legegyszerűbb eszközök segítik az
+                                Ezenfelül az oldalon a kommunikációhoz szükséges legegyszerűbb eszközök segítik
+                                az
                                 ügyfeleket a céggel történő kapcsolatfelvételben.
 
                             </p>
