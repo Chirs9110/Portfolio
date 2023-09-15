@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//console hiding
+//console disbale
 (function(){
  
     var _z = console;
@@ -148,3 +148,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
    
   })();
+
+  window.console.log = function(){
+    console.error('Sorry , developers tools are blocked here....');
+    window.console.log = function() {
+        return false;
+    }
+  }
+  
+  console.log('test')
