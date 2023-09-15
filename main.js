@@ -131,29 +131,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//console disbale
-(function(){
- 
-    var _z = console;
-    Object.defineProperty( window, "console", {
-          get : function(){
-              if( _z._commandLineAPI ){
-              throw "Sorry, Can't execute scripts!";
-                    }
-              return _z; 
-          },
-          set : function(val){
-              _z = val;
-          }
-    });
-   
-  })();
-
-  window.console.log = function(){
-    console.error('Sorry , developers tools are blocked here....');
-    window.console.log = function() {
-        return false;
-    }
-  }
-  
-  console.log('test')
