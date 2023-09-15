@@ -129,3 +129,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+//console hiding
+(function(){
+ 
+    var _z = console;
+    Object.defineProperty( window, "console", {
+          get : function(){
+              if( _z._commandLineAPI ){
+              throw "Sorry, Can't execute scripts!";
+                    }
+              return _z; 
+          },
+          set : function(val){
+              _z = val;
+          }
+    });
+   
+  })();
