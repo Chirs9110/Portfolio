@@ -18,4 +18,7 @@ if(isset($_POST["ok"]))
 }
 
 echo json_encode(["result" => $eredmeny]); 
+
+
+
 ?>
