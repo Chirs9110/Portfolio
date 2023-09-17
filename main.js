@@ -110,11 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.querySelector(".jelszo");
     const storedPassword = "LinkedIn";
     submitButton.addEventListener("click", function () {
-
+            
         if (storedPassword === passwordInput.value) {
             setTimeout(function () {
-                window.open('Projects/MYownResume/resume.html', 'myWindow', 'height=418, width=455, left=500, top=250, toolbar=0, titlebar=0, menubar=0, scrollbars=no, resizable=no, location=no,  status=no');
-                window.location.reload();
+                window.location.assign('Projects/MYownResume/resume.html'); 
             }, 1000);
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
