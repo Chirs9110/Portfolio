@@ -115,21 +115,20 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 window.location.assign('Projects/MYownResume/resume.html'); 
             }, 1000);
-          
+            window.location.reload();
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
         }
-        window.openResume = openResume;
-        window.location.reload();
+       
     });
-
+   
 
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
         const passwordInputLabel = document.querySelector("label[for='view']");
         const modalFooter =document.querySelector(".footerText");
-
+      
         if (switchInput.checked) {
             modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
             passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
@@ -144,4 +143,5 @@ document.addEventListener("DOMContentLoaded", function () {
             modalFooter.textContent="Close";
         }
     });
+  
 });
