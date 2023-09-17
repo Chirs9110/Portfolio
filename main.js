@@ -105,40 +105,39 @@ imageContainers.forEach((imageContainer, index) => {
 });
 
 //authentication to access resume 
-    document.addEventListener("DOMContentLoaded", function () {
-        const submitButton = document.querySelector(".submitButtons");
-        const passwordInput = document.querySelector(".jelszo");
-    
-        submitButton.addEventListener("click", function () {
-            const submittedPassword = passwordInput.value;
-    
-            $.ajax({
-                url: 'validate.php',
-                type: 'POST',
-                dataType: 'json',
-                data: { jelszo: submittedPassword }, // Ne küldjük az "ok" kulcsot
-                success: function (response) {
-                    if (response.result === "success") {
-                        setTimeout(function () {
-                            window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
-                            window.location.reload();
-                        }, 1000);
-                    } else {
-                        alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
-                        passwordInput.value = "";
-                    }
-                },
-                error: function () {
-                    alert(switchInput.checked ? "Hiba történt a kérés során." : "An error occurred during the request.");
-                }
-            });
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.querySelector(".submitButtons");
+    const passwordInput = document.querySelector(".jelszo");
+
+    submitButton.addEventListener("click", function () {
+        const submittedPassword = passwordInput.value;
+
+        $.ajax({
+            url: 'validate.php',
+            type: 'POST',
+            dataType: 'json',
+            data: { ok: 1, jelszo: submittedPassword },
+            success: function (response) {
+                if (response.result === "success") {
+                    setTimeout(function () {
+                        window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
+                    passwordInput.value = "";
+                }                
+            },
+            error: function () {
+                alert(switchInput.checked ? "Hiba történt a kérés során." : "An error occurred during the request.");
+            }
         });
     });
 
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
         const passwordInputLabel = document.querySelector("label[for='view']");
-
+        
         if (switchInput.checked) {
             modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
             passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
@@ -149,3 +148,4 @@ imageContainers.forEach((imageContainer, index) => {
             passwordInput.setAttribute("placeholder", "Write here");
         }
     });
+});
