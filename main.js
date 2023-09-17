@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 window.location.assign('Projects/MYownResume/resume.html');
             }, 1000);
-            window.location.reload();
+       
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
