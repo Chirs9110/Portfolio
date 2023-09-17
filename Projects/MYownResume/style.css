@@ -10,7 +10,8 @@
 
 
 #background {
-    background-image: linear-gradient(#141e30, #243b55);;
+    background-image: linear-gradient(#141e30, #243b55);
+    ;
     background-repeat: repeat;
     background-size: cover;
     background-position: center 0;
@@ -26,7 +27,7 @@
     margin-top: 5%;
     z-index: 1;
     overflow-y: scroll;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .bold {
@@ -48,11 +49,11 @@
     display: flex;
     margin: 50px auto;
     box-shadow:
-    -3px 0 7px #00f,
-    -3px 0 9px #00f,
-    -3px 0 11px #00f,
-    -3px 0 14px rgb(200, 200, 209),
-    -3px 0 14px rgb(210, 210, 219);
+        -3px 0 7px #00f,
+        -3px 0 9px #00f,
+        -3px 0 11px #00f,
+        -3px 0 14px rgb(200, 200, 209),
+        -3px 0 14px rgb(210, 210, 219);
 }
 
 .resume .resume_left {
@@ -167,11 +168,11 @@
     background: #fff;
     padding: 25px;
     box-shadow:
-    3px 0 7px #00f,
-    3px 0 9px #00f,
-    3px 0 11px #00f,
-    3px -3px 15px rgb(200, 200, 209),
-    3px 3px 20px rgb(210, 210, 219);
+        3px 0 7px #00f,
+        3px 0 9px #00f,
+        3px 0 11px #00f,
+        3px -3px 15px rgb(200, 200, 209),
+        3px 3px 20px rgb(210, 210, 219);
 }
 
 .name {
@@ -293,6 +294,12 @@ li .info p {
         padding-bottom: 15px;
     }
 
+    .downloadButton {
+        width: 100px;
+        margin: 10px auto;
+    }
+
+
 }
 
 @media (min-width: 421px) and (max-width: 549px) {
@@ -323,6 +330,12 @@ li .info p {
         padding-bottom: 15px;
     }
 
+
+    .downloadButton {
+        width: 100px;
+        margin: 15px auto;
+    }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 767px) {
@@ -335,6 +348,15 @@ li .info p {
         width: 150%;
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+
+    .downloadButton {
+        width: 200px;
+        margin: 5px auto;
+    }
+
+    button {
+        width: 200px;
     }
 
 }
@@ -350,4 +372,43 @@ li .info p {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
+    .downloadButton {
+        width: 200px;
+        margin: 5px auto -100px auto;
+    }
+
+    button {
+        width: 200px;
+    }
+}
+
+
+@media screen and (min-width: 993px) {
+
+    .downloadButton {
+        width: 200px;
+        margin: 5px auto;
+    }
+
+    button {
+        width: 200px;
+    }
+}
+
+button {
+    margin: 10px;
+    padding: 8px;
+    background-image: linear-gradient(175deg, rgb(16, 23, 42), rgb(27, 37, 65), rgb(16, 23, 42));
+    box-shadow: 2px 2px 5px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: white;
+    transition: background-image 15s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(175deg, rgb(160, 167, 185), rgb(87, 98, 127), rgb(36, 57, 113));
+    cursor: pointer;
 }

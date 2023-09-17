@@ -23,6 +23,11 @@
 <body>
     <div id="background"></div>
     <div class="container">
+        <div class="downloadButton">
+            <button type="button" name="pdfResume" value="pdfResume" onclick="openPdf()">
+                Download resume
+            </button>
+        </div>
         <div class="resume">
             <div class="resume_left">
                 <div class="profil_pic">
@@ -202,9 +207,10 @@
 
                             <table>
                                 <tr>
-                                    <td colspan="2"><i class="fa fa-map-marker icon map-marker"></i> <span class="data">Mikszáth
+                                    <td colspan="2"><i class="fa fa-map-marker icon map-marker"></i> <span
+                                            class="data">Mikszáth
                                             Kálmán
-                                            utca 67,  <span class="currentCity">1184 Budapest</span></span></td>
+                                            utca 67, <span class="currentCity">1184 Budapest</span></span></td>
 
                                 </tr>
                                 <tr>
@@ -215,7 +221,7 @@
                                 <tr>
                                     <td>
                                         <i class="fas fa-mobile-alt icon"></i><span class="data">
-                                                +36-30-947-45-18
+                                            +36-30-947-45-18
                                         </span>
                                     </td>
                                 </tr>
@@ -234,7 +240,8 @@
                                 <p class="semi-bold">EDD Sergeant - Explosive Detection Dog Handler, Hungarian Defence
                                     Forces
                                 </p>
-                                <p style="font-size: 14px;"> - Detect explosive materials by dog support and prevent the unauthorized
+                                <p style="font-size: 14px;"> - Detect explosive materials by dog support and prevent the
+                                    unauthorized
                                     introduction
                                     of explosive devices or matter</p>
 
@@ -244,7 +251,9 @@
                             <div class="date">2018 - 2020</div>
                             <div class="info">
                                 <p class="semi-bold">Special Forces Communcations Sergeant, Hungarian Defence Forces</p>
-                                <p style="font-size: 14px;"> - Operate software-defined radio systems with a custom configuration program in accordance with the rules of the Communication Security procedure.
+                                <p style="font-size: 14px;"> - Operate software-defined radio systems with a custom
+                                    configuration program in accordance with the rules of the Communication Security
+                                    procedure.
                                 </p>
                             </div>
                         </li>
@@ -252,7 +261,8 @@
                             <div class="date">2020 - 2023</div>
                             <div class="info">
                                 <p class="semi-bold">Ministry of Defence of Hungarian</p>
-                                <p style="font-size: 14px;"> - Organize and coordinate internal communication system in cooperation with
+                                <p style="font-size: 14px;"> - Organize and coordinate internal communication system in
+                                    cooperation with
                                     subordinate
                                     and partner organizations</p>
                             </div>
@@ -290,13 +300,14 @@
                             <div class="date">2022-</div>
                             <div class="info">
                                 <p class="semi-bold"> Front-end Developer Course, Ruander Oktatási Ltd, Budapest</p>
-                                <span style="font-size: 14px;"> HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Angular, NodeJs </span>
+                                <span style="font-size: 14px;"> HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Angular,
+                                    NodeJs </span>
                             </div>
                         </li>
                         <li>
                             <div class="date">2023-</div>
                             <div class="info">
-                                <p class="semi-bold"> Scrimba Frontend Carrier path course -  at personalized pace</p>
+                                <p class="semi-bold"> Scrimba Frontend Carrier path course - at personalized pace</p>
                             </div>
                         </li>
                         <li>
@@ -312,6 +323,12 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script>
+
+        function openPdf() {
+            window.open('Resume.pdf', '_blank');
+        }
+    </script>
 </body>
 
 </html>

@@ -104,30 +104,48 @@ imageContainers.forEach((imageContainer, index) => {
     }
 });
 
-//'HandMade' Safety check  
+//authentication to access resume 
 document.addEventListener("DOMContentLoaded", function () {
-    const submitButtons = document.querySelectorAll(".submitButton");
-    const captchaInputs = document.querySelectorAll(".m_captcha_answer_modal");
+    const submitButton = document.querySelector(".submitButtons");
+    const passwordInput = document.querySelector(".jelszo");
 
-    submitButtons.forEach(function (submitButton, index) {
-        submitButton.addEventListener("click", function (event) {
-            event.preventDefault();
-            const captchaInput = captchaInputs[index];
-            const captchaAnswer = captchaInput.value.toLowerCase();
-            let correctAnswer = "ear";
+    submitButton.addEventListener("click", function () {
+        const submittedPassword = passwordInput.value;
 
-            if (switchInput.checked) {
-                correctAnswer = "fül";
-            }
-            if (captchaAnswer === correctAnswer) {
-                window.location.href = "mailto:krisztianczinege.info@gmail.com";
-                window.location.reload();
-            } else {
-                alert(switchInput.checked ? "Hibás válasz!" : "Wrong answer!");
-                captchaInput.value = "";
+        $.ajax({
+            url: 'validate.php',
+            type: 'POST',
+            dataType: 'json',
+            data: { ok: 1, jelszo: submittedPassword },
+            success: function (response) {
+                if (response.result === "success") {
+                    setTimeout(function () {
+                        window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
+                    passwordInput.value = "";
+                }
+            },
+            error: function () {
+                alert(switchInput.checked ? "Hiba történt a kérés során." : "An error occurred during the request.");
             }
         });
     });
+
+    switchInput.addEventListener("change", function () {
+        const modalTitle = document.querySelector(".modal-title");
+        const passwordInputLabel = document.querySelector("label[for='view']");
+
+        if (switchInput.checked) {
+            modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
+            passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
+            passwordInput.setAttribute("placeholder", "Ide írj...");
+        } else {
+            modalTitle.textContent = "Viewing the resume is password-protected!";
+            passwordInputLabel.textContent = "Please enter a password";
+            passwordInput.setAttribute("placeholder", "Write here");
+        }
+    });
 });
-
-

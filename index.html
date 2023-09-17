@@ -64,8 +64,8 @@
                             <a class="nav-link projects section" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link resume" href="Projects/MYownResume/resume.html"
-                                target="_blank">Resume</a>
+                            <a class="nav-link resume"
+                                data-bs-toggle="modal" data-bs-target="#resumeModal">Resume</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link contact section" href="#contact">Contact</a>
@@ -75,6 +75,38 @@
             </div>
         </nav>
     </div>
+
+<!-- Modal for authentication -->
+<div class="modal-container text-center">
+    <div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title mx-auto text-danger">
+                        Viewing the resume is password-protected!
+                    </h4>
+                </div>
+                <div class="modal-body bg-dark">
+                    <form method="post">
+                        <div class="text-light form-group">
+                            <label for="view">Please enter a password</label>
+                            <input autofocus class="form-control m-1 form-outline w-50 mx-auto jelszo"  type="password"
+                                name="jelszo" placeholder="Write here" >
+                            <button type="button" class="cardButtons submitButtons" name="ok" id="view">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-dark">
+                    <button type="button" class="btn btn-secondary cardButtons"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <!-- Header -->
 
 
@@ -110,20 +142,17 @@
 
         <div class="container divider">
             <div class="contactSection">
-
-                <div class="sectionOne flex-column flex-lg-row">
-                    <button type="button" name="pdfResume" value="pdfResume">
-                        <a href="Resume.pdf" download target="_blank">Download resume</a>
-                    </button>
-                </div>
-
                 <div class="sectionTwo flex-column flex-lg-row">
-                    <button type="button" name="getInTouch" value="getInTouch">
-                        Get in touch
-                    </button>
+                    <a href="mailto:krisztianczinege.info@gmail.com" target="_blank">
+                        <button type="button" name="getInTouch" value="getInTouch">
+                            Get in touch
+                        </button>
+                    </a>
                 </div>
                
             </div>
+
+           
         </div>
 
         <!-- PROJECTS section -->
@@ -463,19 +492,14 @@
         <div class="container divider">
             <div class="contactSection">
 
-                <div class="sectionOne flex-column flex-lg-row">
-                    <button type="button" name="pdfResume" value="pdfResume">
-                        <a href="Resume.pdf" download>Önéletrajz letöltése</a>
-                    </button>
-                </div>
-
-
+    
                 <div class="sectionTwo flex-column flex-lg-row">
-                    <button type="button" name="getInTouch" value="getInTouch">
-                        Írj nekem e-mailt
-                    </button>
+                    <a href="mailto:krisztianczinege.info@gmail.com" target="_blank">
+                        <button type="button" name="getInTouch" value="getInTouch">
+                            Írj nekem e-mailt
+                        </button>
+                    </a>
                 </div>
-               
             
 
             </div>
@@ -795,6 +819,7 @@
 
     </div>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
