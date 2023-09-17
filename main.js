@@ -106,7 +106,7 @@ imageContainers.forEach((imageContainer, index) => {
 
 //authentication to access resume 
 document.addEventListener("DOMContentLoaded", function () {
-    const submitButton = document.querySelector(".submitButtons");
+    const submitButton = document.querySelector(".submitButton");
     const passwordInput = document.querySelector(".jelszo");
     const storedPassword = "LinkedIn";
     submitButton.addEventListener("click", function () {
@@ -115,26 +115,33 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 window.location.assign('Projects/MYownResume/resume.html'); 
             }, 1000);
+          
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
         }
         window.openResume = openResume;
+        window.location.reload();
     });
 
 
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
         const passwordInputLabel = document.querySelector("label[for='view']");
+        const modalFooter =document.querySelector(".footerText");
 
         if (switchInput.checked) {
             modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
             passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
             passwordInput.setAttribute("placeholder", "Ide írj...");
+            submitButton.textContent='Küldés';
+            modalFooter.textContent="Bezárás";
         } else {
             modalTitle.textContent = "Viewing the resume is password-protected!";
             passwordInputLabel.textContent = "Please enter a password";
             passwordInput.setAttribute("placeholder", "Write here");
+            submitButton.textContent='Submit';
+            modalFooter.textContent="Close";
         }
     });
 });
