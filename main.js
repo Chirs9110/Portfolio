@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
         if (storedPassword === passwordInput.value) {
             setTimeout(function () {
-                window.location.assign('Projects/MYownResume/resume.html'); 
+                window.location.assign('Projects/MYownResume/resume.html','toolbar=no, menubar=no'); 
             }, 1000);
             window.location.reload();
         } else {
