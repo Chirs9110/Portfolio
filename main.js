@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $.ajax({
             url: 'validate.php',
             type: 'POST',
-            dataType: 'json',
+            dataType: 'text',
             data: { ok: 1, jelszo: submittedPassword },
             success: function (response) {
                 if (response.result === "success") {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
                     passwordInput.value = "";
-                }                
+                }
             },
             error: function () {
                 alert(switchInput.checked ? "Hiba történt a kérés során." : "An error occurred during the request.");
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
         const passwordInputLabel = document.querySelector("label[for='view']");
-        
+
         if (switchInput.checked) {
             modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
             passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
