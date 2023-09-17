@@ -110,38 +110,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.querySelector(".jelszo");
     const storedPassword = "LinkedIn";
     submitButton.addEventListener("click", function () {
-            
+
         if (storedPassword === passwordInput.value) {
             setTimeout(function () {
-                window.location.assign('Projects/MYownResume/resume.html','toolbar=no, menubar=no'); 
+                window.location.assign('Projects/MYownResume/resume.html');
             }, 1000);
             window.location.reload();
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
         }
-       
+
     });
-   
+
 
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
         const passwordInputLabel = document.querySelector("label[for='view']");
-        const modalFooter =document.querySelector(".footerText");
-      
+        const modalFooter = document.querySelector(".footerText");
+
         if (switchInput.checked) {
             modalTitle.textContent = "Az önéletrajz megtekintése jelszóval védett!";
             passwordInputLabel.textContent = "Kérlek, add meg a jelszót";
             passwordInput.setAttribute("placeholder", "Ide írj...");
-            submitButton.textContent='Küldés';
-            modalFooter.textContent="Bezárás";
+            submitButton.textContent = 'Küldés';
+            modalFooter.textContent = "Bezárás";
         } else {
             modalTitle.textContent = "Viewing the resume is password-protected!";
             passwordInputLabel.textContent = "Please enter a password";
             passwordInput.setAttribute("placeholder", "Write here");
-            submitButton.textContent='Submit';
-            modalFooter.textContent="Close";
+            submitButton.textContent = 'Submit';
+            modalFooter.textContent = "Close";
         }
     });
-  
+
 });
