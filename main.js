@@ -113,13 +113,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (storedPassword === passwordInput.value) {
             setTimeout(function () {
-                window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
+                window.open('Projects/MYownResume/resume.html', 'myWindow', 'height=418, width=455, left=500, top=250, toolbar=0, titlebar=0, menubar=0, scrollbars=no, resizable=no, location=no,  status=no');
                 window.location.reload();
             }, 1000);
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
         }
+        window.openResume = openResume;
     });
 
 
