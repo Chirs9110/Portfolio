@@ -108,31 +108,20 @@ imageContainers.forEach((imageContainer, index) => {
 document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.querySelector(".submitButtons");
     const passwordInput = document.querySelector(".jelszo");
-
+    const storedPassword = "dd84425b72da12c6c828339ce814342daceac705b50d42e377e1acebf8f2320b";
     submitButton.addEventListener("click", function () {
-        const submittedPassword = passwordInput.value;
 
-        $.ajax({
-            url: 'validate.php',
-            type: 'POST',
-            dataType: 'text',
-            data: { ok: 1, jelszo: submittedPassword },
-            success: function (response) {
-                if (response.result === "success") {
-                    setTimeout(function () {
-                        window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
-                        window.location.reload();
-                    }, 1000);
-                } else {
-                    alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
-                    passwordInput.value = "";
-                }
-            },
-            error: function () {
-                alert(switchInput.checked ? "Hiba történt a kérés során." : "An error occurred during the request.");
-            }
-        });
+        if (storedPassword === passwordInput.value) {
+            setTimeout(function () {
+                window.open('Projects/MYownResume/resume.html', '_blank', 'toolbar=no, menubar=no');
+                window.location.reload();
+            }, 1000);
+        } else {
+            alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
+            passwordInput.value = "";
+        }
     });
+
 
     switchInput.addEventListener("change", function () {
         const modalTitle = document.querySelector(".modal-title");
