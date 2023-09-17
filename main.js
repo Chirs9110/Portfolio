@@ -108,7 +108,7 @@ imageContainers.forEach((imageContainer, index) => {
 document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.querySelector(".submitButtons");
     const passwordInput = document.querySelector(".jelszo");
-    const storedPassword = "dd84425b72da12c6c828339ce814342daceac705b50d42e377e1acebf8f2320b";
+    const storedPassword = "LinkedIn";
     submitButton.addEventListener("click", function () {
 
         if (storedPassword === passwordInput.value) {
