@@ -295,8 +295,8 @@ li .info p {
     }
 
     .downloadButton {
-        width: 100px;
-        margin: 10px auto;
+        width: 150px;
+        margin: 200px auto 0px auto;
     }
 
 
@@ -332,8 +332,8 @@ li .info p {
 
 
     .downloadButton {
-        width: 100px;
-        margin: 15px auto;
+        width: 150px;
+        margin: 200px auto 0px auto;
     }
 
 }
