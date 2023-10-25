@@ -1,0 +1,110 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url("bg.jpeg");
+    background-repeat: no-repeat;
+   background-attachment: fixed; 
+   background-size: 100% 100%;
+}
+
+.uploadcontainer, .galcontainer {
+    background-image: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    color: white;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    border-style: groove;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #ff5252;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+
+h1 {
+    color:white;
+    text-align: center;
+    text-shadow:1px 1px 5px;
+}
+
+h3{
+    color:white;
+    text-align: center;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.custom-button {
+    background-color: #c3d041;
+    background-image: linear-gradient(orange, black, orange);
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+.custom-button:hover {
+    background-image: linear-gradient(43deg, #c3d041 0%, #58c850 46%, #FFCC70 100%);
+    transform: scale(1.1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.success, .error
+{
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.alert-success
+{
+    color: green;
+}
+.alert-danger
+{
+    color: red;
+    font-size:20px;
+}
+
+.icons{
+    width:180px;
+    height:150px;
+}
+.icons:hover, .images:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.images{
+    width:250px;
+    height:200px;
+    border-radius: 10px;
+    border: 3px groove black;
+
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: none;
+    }
+
+    .uploadcontainer {
+        width: 100%;
+    }
+
+    .galcontainer {
+        width: 100%;
+    }
+}
