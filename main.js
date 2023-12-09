@@ -80,6 +80,7 @@ imageContainers.forEach((imageContainer, index) => {
         if (showGif) {
             projectImage.style.display = 'none';
             projectGif.style.display = 'block';
+            projectGif.style.width='-1050px';
             isGifVisible = true;
         } else {
             projectImage.style.display = 'block';
