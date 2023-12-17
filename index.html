@@ -63,10 +63,10 @@
                         <li class="nav-item">
                             <a class="nav-link projects section" href="#projects">Projects</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link resume" data-bs-toggle="modal" data-bs-target="#resumeModal"
                                 style="cursor: pointer;">Resume</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link contact section" href="#contact">Contact</a>
                         </li>
@@ -93,8 +93,7 @@
                                 <label for="view">Please enter a password</label>
                                 <input autofocus class="form-control m-1 form-outline w-50 mx-auto jelszo"
                                     type="password" name="jelszo" placeholder="Write here">
-                                <button type="button" class="cardButtons submitButton" name="ok"
-                                    id="view">Submit
+                                <button type="button" class="cardButtons submitButton" name="ok" id="view">Submit
                                 </button>
                             </div>
                         </form>
@@ -161,26 +160,26 @@
         <div class="projects-section slide-in" id="projects">
             <h2>Projects I've Worked On</h2>
             <div class="project-container">
-                <!-- <div class="image-container">
+                <div class="image-container">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/berenyi.png" alt="Project 1">
+                            <img src="images/passwordBg.jpg" alt="Project 1">
                         </div>
                         <div class="project-gif">
-                            <img src="images/Compressedgif/berenyiSirko.gif">
+                            <img src="images/Compressedgif/passwordGenerator.gif">
                         </div>
-                        <h3>Project of Headstone Website</h3>
-                        <p>Language: <span class="flag">🇭🇺</span></p>
+                        <h3>Password Generator</h3>
+                        <p>Language: <span class="flag">🇬🇧</span></p>
                         <div class="buttonGroup">
                             <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal">
                                 More info...
                             </button>
                             <button class="cardButtons">
-                                <a href="https://www.berenyisirko.hu" target="_blank">Click here for project</a>
+                                <a href="http://passwordtest.kesug.com/" target="_blank">Click here for project</a>
                             </button>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
 
                 <div class="image-container">
@@ -255,9 +254,9 @@
 
         <!-- Project Modals Section -->
 
-<!-- Headstone Modal -->
+        <!-- Password Generator Modal -->
         <div class="modal-container text-center">
-            <!-- <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+            <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -268,22 +267,19 @@
                         <div class="modal-body bg-dark">
                             <h3>
                                 Short Description</h3>
-                            <p>This single-page website is designed to showcase the work of Berényi Sírkő
-                                Ltd., thus reaching a wider customer base. During its development, the main
-                                goal was to create simplicity and a professional appearance that aligns well
-                                with the industry. The lightbox gallery feature enables the viewing of
-                                images.
+                            <p>This site is one of the early projects, introducing a user-friendly password generator.
+                                Users can customize the length of generated passwords, choose symbols and numbers, and
+                                track password strength through a visual bar. The site features a dark color scheme and
+                                some CSS animations, while its responsive design ensures optimal display across various
+                                devices.
 
                             </p>
                             <h3>Key features</h3>
                             <ul>
-                                <li>Custom CSS Animated Menu
+                                <li>Selection of Symbols and Numbers
                                 </li>
-                                <li>Progress Fill-bar</li>
-                                <li>Lightbox Image Display</li>
-                                <li>A Dark Color appearance which is most suitable for the given field of
-                                    expertise
-                                </li>
+                                <li>Visual Tracking of Password Strength</li>
+                                <li>Basic CSS Animations</li>
                                 <li>Responsive Design</li>
                             </ul>
                             <h3>Technologies used</h3>
@@ -291,6 +287,7 @@
                                 <img src="images/icons/icons8-html.svg" alt="html_icon">
                                 <img src="images/icons/icons8-css.svg" alt="css_icon">
                                 <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-javascript.svg" alt="javacript_icon">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -298,9 +295,9 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
-<!-- Admin Modal -->
+            <!-- Admin Modal -->
             <div class="modal fade" id="projectModal2" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
@@ -345,7 +342,7 @@
                 </div>
             </div>
 
-<!-- Qr Code Modal -->
+            <!-- Qr Code Modal -->
             <div class="modal fade" id="projectModal3" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg  modal-frame modal-top" role="document">
@@ -389,20 +386,27 @@
                 </div>
             </div>
 
-<!-- PHP Gallery Modal -->
+            <!-- PHP Gallery Modal -->
             <div class="modal-container text-center">
-                <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="projectModal4" tabindex="-1" role="dialog"
+                    aria-labelledby="projectModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="projectModalLabel">Project </h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body bg-dark">
                                 <h3>
                                     Short Description</h3>
-                                <p>This PHP project consists of two parts: the first part handles gallery creation and the second part manages image uploads to existing galleries. In the gallery creation section, it checks if a gallery name is provided, creates a new directory for the gallery if it doesn't already exist, and provides feedback on the success of the creation. In the image upload section, it allows users to select a gallery, upload multiple images, and validates that the uploaded files are in suitable formats (JPEG, PNG, or WebP).
+                                <p>This PHP project consists of two parts: the first part handles gallery creation and
+                                    the second part manages image uploads to existing galleries. In the gallery creation
+                                    section, it checks if a gallery name is provided, creates a new directory for the
+                                    gallery if it doesn't already exist, and provides feedback on the success of the
+                                    creation. In the image upload section, it allows users to select a gallery, upload
+                                    multiple images, and validates that the uploaded files are in suitable formats
+                                    (JPEG, PNG, or WebP).
                                 </p>
                                 <h3>Key features</h3>
                                 <ul>
@@ -429,74 +433,75 @@
                 </div>
 
 
-            <div class="container m-5 mb-lg-0 slide-in text-center mx-auto">
-                <div class="spacer">
-                    <hr class="spacer-line">
-                </div>
-                <h2 class="m-5">Skills</h2>
-                <div id="skills">
-                    <div class="row">
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-html.svg" alt="html"> <span>HTML</span>
+                <div class="container m-5 mb-lg-0 slide-in text-center mx-auto">
+                    <div class="spacer">
+                        <hr class="spacer-line">
+                    </div>
+                    <h2 class="m-5">Skills</h2>
+                    <div id="skills">
+                        <div class="row">
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-html.svg" alt="html"> <span>HTML</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-css.svg" alt="css"> <span>CSS</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-css.svg" alt="css"> <span>CSS</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap">
-                                <span>Bootstrap</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap">
+                                    <span>Bootstrap</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container"><img src="images/icons/icons8-javascript.svg" alt="javascript">
-                                <span>JavaScript</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container"><img src="images/icons/icons8-javascript.svg"
+                                        alt="javascript">
+                                    <span>JavaScript</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-jquery.svg" alt="jquery">
-                                <span>Jquery</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-jquery.svg" alt="jquery">
+                                    <span>Jquery</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-typescript.svg" alt="typescript">
-                                <span>Typescript</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-typescript.svg" alt="typescript">
+                                    <span>Typescript</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-angular.svg" alt="angular">
-                                <span>Angular</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-angular.svg" alt="angular">
+                                    <span>Angular</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-nodejs.svg" alt="node">
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-nodejs.svg" alt="node">
 
-                                <span>Node</span>
+                                    <span>Node</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4 skill">
-                            <div class="skill-container">
-                                <img src="images/icons/icons8-github.svg" alt="git/github"> <span>Git
-                                    /
-                                    GitHub</span>
+                            <div class="col-4 skill">
+                                <div class="skill-container">
+                                    <img src="images/icons/icons8-github.svg" alt="git/github"> <span>Git
+                                        /
+                                        GitHub</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="spacer">
-                    <hr class="spacer-line">
+                    <div class="spacer">
+                        <hr class="spacer-line">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
         <div class="lowerWave">
@@ -542,7 +547,7 @@
                         lelkesedik a webfejlesztésért, nyitott az új kihívásokra, nem utolsósorban pedig
                         hisz az élethosszig tartó tanulásban. Szívesen veszek részt felhasználóbarát és
                         hatékony weboldalak készítésében. Ha épp nem kódolok,
-                         olvasok, aktívan mozgok, túrázok mindenfelé a nagy világban.</p>
+                        olvasok, aktívan mozgok, túrázok mindenfelé a nagy világban.</p>
                     </div>
                 </div>
 
@@ -574,26 +579,26 @@
         <div class="projects-section slide-in" id="projektek" data-lang="hu">
             <h2>Projektek</h2>
             <div class="project-container">
-                <!-- <div class="image-container">
+                <div class="image-container">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/berenyi.png" alt="Project 1">
+                            <img src="images/passwordBg.jpg" alt="Project 1">
                         </div>
                         <div class="project-gif">
-                            <img src="images/Compressedgif/berenyiSirko.gif">
+                            <img src="images/Compressedgif/passwordGenerator.gif">
                         </div>
-                        <h3>Sírköves weboldal projekt</h3>
-                        <p>Nyelv: <span class="flag">🇭🇺</span></p>
+                        <h3>Jelszó Generátor</h3>
+                        <p>Nyelv: <span class="flag">🇬🇧</span></p>
                         <div class="buttonGroup">
                             <button class="cardButtons" data-bs-toggle="modal" data-bs-target="#projectModal5">
                                 Részletek...
                             </button>
                             <button class="cardButtons">
-                                <a href="https://www.berenyisirko.hu" target="_blank">Projekt megtekintése</a>
+                                <a href="http://passwordtest.kesug.com/" target="_blank">Projekt megtekintése</a>
                             </button>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
 
                 <div class="image-container">
@@ -670,7 +675,7 @@
 
 
         <div class="modal-container text-center">
-            <!-- <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+            <div class="modal fade" id="projectModal5" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -681,25 +686,20 @@
                         <div class="modal-body bg-dark">
                             <h3>
                                 Rövid leírás</h3>
-                            <p>Ez a single-page a Berényi Sírkő kft munkáját hivatott prezentálni, ezzel segítve
-                                a
-                                szélesebb ügyfélkör elérését. A kivitelezés során az egyszerűség, és a szakmához
-                                jól
-                                illeszkedő színek, valamint az arculat megteremtése volt elsődleges.
-                                A képek megtekintését a lightbox képnézegető teszi lehetővé.
-                                Ezenfelül az oldalon a kommunikációhoz szükséges legegyszerűbb eszközök segítik
-                                az
-                                ügyfeleket a céggel történő kapcsolatfelvételben.
+                            <p>Ez az oldal az első projektek egyikeként készült, mely egy felhasználóbarát
+                                jelszógenerátort mutat be. A felhasználók testreszabhatják a generált jelszavak hosszát,
+                                választhatnak szimbólumokat és számokat, és követhetik a kívánt jelszóerősséget egy
+                                vizuális sávon keresztül. Az oldalt sötét színséma és néhány alapvető CSS animáció
+                                jellemzi, a reszponzív dizájn pedig biztosítja az optimális megjelenést különböző
+                                eszközökön.
 
                             </p>
                             <h3>Főbb jellemzők</h3>
                             <ul>
-                                <li>Egyedi css menü
-                                </li>
-                                <li>Progress Fill-bar</li>
-                                <li>Lightbox képmegjelenítés</li>
-                                <li>Az adott szakterülethez leginkább illeszkedő színhatások
-                                </li>
+
+                                <li>Szimbólumok és számok hozzáadásának lehetősége</li>
+                                <li>Jelszóerősség vizuális visszajelzése</li>
+                                <li>Alapvető CSS animációk megjelenítése </li>
                                 <li>Reszponzív design</li>
                             </ul>
 
@@ -708,6 +708,7 @@
                                 <img src="images/icons/icons8-html.svg" alt="html_icon">
                                 <img src="images/icons/icons8-css.svg" alt="css_icon">
                                 <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-javascript.svg" alt="javacript_icon">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -715,7 +716,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <div class="modal fade" id="projectModal6" tabindex="-1" role="dialog" aria-labelledby="projectModal2Label"
                 aria-hidden="true">
@@ -806,38 +807,43 @@
             </div>
 
             <div class="modal fade" id="projectModal8" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg  modal-frame modal-top" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="projectModalLabel">Project </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body bg-dark">
-                        <h3>Rövid leírás</h3>
-                        <p>Ez a PHP projekt két részből áll: az első rész a galéria létrehozását valósítja meg, míg a második rész azoknak a képeknek a feltöltését kezeli a létrehozott galériákba. A galéria létrehozás közben ellenőrzésre kerül, hogy van-e megadva galérianév, és létezik-e már, valamint rövid visszajelzést ad a létrehozás eredményéről. A képfeltöltés részben a felhasználók kiválaszthatnak egy galériát, több képet tölthetnek fel a megadott formátumok alapján (JPEG, PNG vagy WebP).</p>
-                        <h3>Főbb jellemzők</h3>
-                        <ul>
-                            <li> Egyszerű Galéria Létrehozás</li>
-                            <li>Felhasználóbarát Képfeltöltés</li>
-                            <li>Informatív Visszajelzés</li>
-                            <li>Reszponzív Design</li>
-                          
-                        </ul>
-                        <h3>Felhasznált Technológiák</h3>
-                        <div class="bg-dark">
-                            <img src="images/icons/icons8-html.svg" alt="html_icon">
-                            <img src="images/icons/icons8-css.svg" alt="css_icon">
-                            <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
-                            <img src="images/icons/icons8-php.svg" alt="php_icon">
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg  modal-frame modal-top" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel">Project </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        <div class="modal-body bg-dark">
+                            <h3>Rövid leírás</h3>
+                            <p>Ez a PHP projekt két részből áll: az első rész a galéria létrehozását valósítja meg, míg
+                                a második rész azoknak a képeknek a feltöltését kezeli a létrehozott galériákba. A
+                                galéria létrehozás közben ellenőrzésre kerül, hogy van-e megadva galérianév, és
+                                létezik-e már, valamint rövid visszajelzést ad a létrehozás eredményéről. A képfeltöltés
+                                részben a felhasználók kiválaszthatnak egy galériát, több képet tölthetnek fel a
+                                megadott formátumok alapján (JPEG, PNG vagy WebP).</p>
+                            <h3>Főbb jellemzők</h3>
+                            <ul>
+                                <li> Egyszerű Galéria Létrehozás</li>
+                                <li>Felhasználóbarát Képfeltöltés</li>
+                                <li>Informatív Visszajelzés</li>
+                                <li>Reszponzív Design</li>
+
+                            </ul>
+                            <h3>Felhasznált Technológiák</h3>
+                            <div class="bg-dark">
+                                <img src="images/icons/icons8-html.svg" alt="html_icon">
+                                <img src="images/icons/icons8-css.svg" alt="css_icon">
+                                <img src="images/icons/icons8-bootstrap.svg" alt="bootstrap_icon">
+                                <img src="images/icons/icons8-php.svg" alt="php_icon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
             <div class="container m-5 mb-lg-0 slide-in text-center mx-auto">
