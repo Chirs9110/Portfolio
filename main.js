@@ -11,15 +11,15 @@ switchInput.addEventListener('click', function () {
         toggle.classList.add('.toggleActive');
         formText.textContent = 'EN';
         document.querySelector('.projects').textContent = 'Projektek';
-        document.querySelector('.resume').textContent = 'Önéletrajz';
+        // document.querySelector('.resume').textContent = 'Önéletrajz';
         document.querySelector('.contact').textContent = 'Kapcsolat';
 
         const projectLink = document.querySelector('.projects.section');
-        const resumeLink = document.querySelector('.resume');
+        // const resumeLink = document.querySelector('.resume');
         const contactLink = document.querySelector('.contact.section');
 
         projectLink.href = '#projektek';
-        resumeLink.href = 'Projects/MYownResume/resume.html';
+        // resumeLink.href = 'Projects/MYownResume/resume.html';
         contactLink.href = '#kapcsolat';
 
     }
@@ -28,15 +28,15 @@ switchInput.addEventListener('click', function () {
         englishText.style.display = 'block';
         formText.textContent = 'HU';
         document.querySelector('.projects').textContent = 'Projects';
-        document.querySelector('.resume').textContent = 'Resume';
+        // document.querySelector('.resume').textContent = 'Resume';
         document.querySelector('.contact').textContent = 'Contact';
 
         const projectLink = document.querySelector('.projects.section');
-        const resumeLink = document.querySelector('.resume');
+        // const resumeLink = document.querySelector('.resume');
         const contactLink = document.querySelector('.contact.section');
 
         projectLink.href = '#projects';
-        resumeLink.href = 'Projects/MYownResume/resume.html';
+        // resumeLink.href = 'Projects/MYownResume/resume.html';
         contactLink.href = '#contact';
 
 
@@ -80,7 +80,7 @@ imageContainers.forEach((imageContainer, index) => {
         if (showGif) {
             projectImage.style.display = 'none';
             projectGif.style.display = 'block';
-            projectGif.style.width='-1050px';
+            projectGif.style.width = '-1050px';
             isGifVisible = true;
         } else {
             projectImage.style.display = 'block';
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 window.location.assign('Projects/MYownResume/resume.html');
             }, 1000);
-       
+
         } else {
             alert(switchInput.checked ? "Hibás jelszó!" : "Incorrect Password!");
             passwordInput.value = "";
