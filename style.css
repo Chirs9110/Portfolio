@@ -182,7 +182,7 @@ body {
     .aboutMePicture {
         width: 250px;
         height: 250px;
-       
+
     }
 
     .right-side-header {
@@ -658,4 +658,3 @@ footer {
 .lowerWave svg {
     transform: rotate(180deg)translateY(-40px);
 }
-
